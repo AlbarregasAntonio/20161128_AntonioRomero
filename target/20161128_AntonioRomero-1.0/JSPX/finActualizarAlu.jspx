@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<jsp:root   xmlns:jsp="http://java.sun.com/JSP/Page"
+            xmlns:c="http://java.sun.com/jsp/jstl/core"
+            version="2.1">
+    <jsp:directive.page contentType="text/html; charset=UTF-8" />
+    <jsp:directive.page isELIgnored="false" />
+    <jsp:output omit-xml-declaration="false"
+                doctype-root-element="html"
+                doctype-public="-//W3C//DTD XHTML 1.1//EN"
+                doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml11.dtd" />
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Actualización</title>
+    </head>
+    <body>
+        
+        <h2>Actualización de alumnos</h2>
+        <div>
+            <h3>Se ha actualizado el alumno de id ${alumno.idAlumno} con los datos</h3>
+            <ul>
+                <li><c:out value="Nombre: ${alumno.nombre}" /></li>
+                <li><c:out value="Grupo: ${alumno.grupo}" /></li>
+            </ul>
+        </div>
+            <br/>
+            <p><a href="${contexto}/">Menú</a></p>
+    </body>
+</html>
+</jsp:root>

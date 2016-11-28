@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<jsp:root   xmlns:jsp="http://java.sun.com/JSP/Page"
+            xmlns:c="http://java.sun.com/jsp/jstl/core"
+            version="2.1">
+    <jsp:directive.page contentType="text/html; charset=UTF-8" />
+    <jsp:directive.page isELIgnored="false" />
+    <jsp:output omit-xml-declaration="false"
+                doctype-root-element="html"
+                doctype-public="-//W3C//DTD XHTML 1.1//EN"
+                doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml11.dtd" />
+    <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <title>Visualización</title>
+        </head>
+        <body>
+
+            <h2>Visualización de alumnos</h2>
+            <div>
+
+                <h1>Listado de alumnos</h1>
+                <form method="post" action="${contexto}/Operacion">
+                    <label>Número de alumnos</label>
+                    <input type="text" name="numero" pattern="^([0-9])*$"/>
+                    <br/>
+                    <input type="hidden" name="opcion" value="${opcion}" />
+                    <input type="checkbox" name="all" value="todos" checked="checked"/>Todos<br/>
+                    <input type="submit" name="enviar" value="Enviar" />
+                </form>
+            </div>
+        </body>
+    </html>
+</jsp:root>

@@ -1,0 +1,15 @@
+es\albarregas\daofactory\MySQLDAOFactory.class
+es\albarregas\DAO\EquiposDAO.class
+es\albarregas\DAO\IEquiposDAO.class
+es\albarregas\daofactory\DAOFactory.class
+es\albarregas\beans\Alumno.class
+es\albarregas\DAO\ConnectionFactory.class
+es\albarregas\filters\UTF8Filter.class
+es\albarregas\daofactory\FicheroDAOFactory.class
+es\albarregas\daofactory\OracleDAOFactory.class
+es\albarregas\DAO\IAlumnosDAO.class
+es\albarregas\controllers\Eleccion.class
+es\albarregas\controllers\Eleccion2.class
+es\albarregas\controllers\Operacion.class
+es\albarregas\beans\Equipo.class
+es\albarregas\DAO\AlumnosDAO.class

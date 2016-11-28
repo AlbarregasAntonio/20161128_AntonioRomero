@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<jsp:root   xmlns:jsp="http://java.sun.com/JSP/Page"
+            xmlns:c="http://java.sun.com/jsp/jstl/core"
+            version="2.1">
+    <jsp:directive.page contentType="text/html; charset=UTF-8" />
+    <jsp:directive.page isELIgnored="false" />
+    <jsp:output omit-xml-declaration="false"
+                doctype-root-element="html"
+                doctype-public="-//W3C//DTD XHTML 1.1//EN"
+                doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml11.dtd" />
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Visualización</title>
+    </head>
+    <body>
+        
+        <h2>Visualización de alumnos</h2>
+        <div>
+            <table>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Grupo</th>
+                    </tr>
+                    <c:forEach items="${alumnos}" var="alumno">
+                        <tr>
+                            <td><c:out value="${alumno.nombre}"/></td>
+                            <td><c:out value="${alumno.grupo}"/></td>
+                        </tr>
+                    </c:forEach>
+            </table>
+            <br/>
+            <p><a href="index.jspx">Menú</a></p>
+        </div>
+    </body>
+</html>
+</jsp:root>

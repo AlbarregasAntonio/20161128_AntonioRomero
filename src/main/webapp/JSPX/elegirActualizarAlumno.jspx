@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<jsp:root   xmlns:jsp="http://java.sun.com/JSP/Page"
+            xmlns:c="http://java.sun.com/jsp/jstl/core"
+            version="2.1">
+    <jsp:directive.page contentType="text/html; charset=UTF-8" />
+    <jsp:directive.page isELIgnored="false" />
+    <jsp:output omit-xml-declaration="false"
+                doctype-root-element="html"
+                doctype-public="-//W3C//DTD XHTML 1.1//EN"
+                doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml11.dtd" />
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Actualización</title>
+    </head>
+    <body>
+        
+        <h2>Actualización de alumnos</h2>
+        <div>
+            <form action="${contexto}/Eleccion2" method="post">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">Nombre</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                
+                    <c:forEach items="${alumnos}" var="alumno">
+                        <tr>
+                            <td><input type="radio" name="registro" value="${alumno.idAlumno}" /></td>
+                            <td><c:out value="${alumno.nombre}"/></td>
+                            
+                        </tr>
+                    </c:forEach>
+                    <input type="hidden" name="opcion" value="${opcion}" />
+                </tbody>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Enviar" /></td>
+                </tr>
+            </table>
+            
+            </form>
+            <br/>
+            <p><a href="${contexto}/">Menú</a></p>
+        </div>
+    </body>
+</html>
+</jsp:root>

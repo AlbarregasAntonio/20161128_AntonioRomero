@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<jsp:root   xmlns:jsp="http://java.sun.com/JSP/Page"
+            xmlns:c="http://java.sun.com/jsp/jstl/core"
+            version="2.1">
+    <jsp:directive.page contentType="text/html; charset=UTF-8" />
+    <jsp:directive.page isELIgnored="false" />
+    <jsp:output omit-xml-declaration="false"
+                doctype-root-element="html"
+                doctype-public="-//W3C//DTD XHTML 1.1//EN"
+                doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml11.dtd" />
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Altas</title>
+    </head>
+    <body>
+        
+        <h2>Altas de nuevos alumnos</h2>
+        <div>
+            <form action="${contexto}/Operacion" method="post">
+                <table>
+                    <tr>
+                        <td><label>Nombre:</label></td>
+                        <td><input type="text" name="nombre" /></td> 
+                    </tr>
+                    <tr>
+                        <td><label>Grupo:</label></td>
+                        <td><input type="text" id="gr" name="grupo" /></td> 
+                    </tr>
+                    <tr>
+                        <td><label for="gr">Equipo:</label></td>
+                        <td>
+                            <select name="equipo">
+                                <option value="0">Elige uno ...</option>
+                                <c:forEach items="${equipos}" var="item">
+                                    <option value="${item.idEquipo}">${item.marca}</option>
+                                </c:forEach>
+                            </select>
+                        </td> 
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="Confirmar" name="confirmar" /></td>
+                        <td><input type="submit" value="Cancelar" name="cancelar" /></td>
+                    </tr>
+                </table>
+                <input type="hidden" name="opcion" value="${opcion}" />
+            </form>
+            
+        </div>
+    </body>
+</html>
+</jsp:root>
